@@ -30,3 +30,4 @@ class Ebicycle(Bicycle):#定义一个Ebicycle类，继承Bicycle类的属性
 
 eb = Ebicycle(10)   #实例化类，只能传参给init方法
 eb.run(200)
+print()
