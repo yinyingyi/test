@@ -26,15 +26,16 @@ class Houyi(Game):      #定义Houyi类，继承Game的属性
         self.defense1 = defense1        #定义defense1属性
 
     def defense(self,enemy_power,enemy_hp):     #定义defense方法
-        final_hp = self.hp + self.defense1 - enemy_power    #后裔的最终血量计算方法
-        enemy_final_hp = enemy_hp - self.power      #敌人的最终血量计算方法
-        if final_hp > enemy_final_hp:
-            print('h我赢啦！！')
-        elif final_hp == enemy_final_hp:
-            print('h打了个平手！')
-        else:
-            print('h很遗憾！我输了！')
+        while True:
+            self.hp = self.hp + self.defense1 - enemy_power    #后裔的最终血量计算方法
+            enemy_hp = enemy_hp - self.power      #敌人的最终血量计算方法
+            print(self.hp,enemy_hp)
+            if self.hp <= 0:
+                print('h我赢啦！！')
+                break
+            elif enemy_hp <= 0:
+                print('h很遗憾！我输了！')
+                break
 
-h = Houyi(300)     #对Houyi()类进行实例化,并给defense1传参
-h.defense(1200,300)     #给Houyi()类中defense方法传参
-print()
+h = Houyi(100)     #对Houyi()类进行实例化,并给defense1传参
+h.defense(200,2222)     #给Houyi()类中defense方法传参
