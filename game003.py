@@ -37,3 +37,4 @@ class Houyi(Game):      #定义Houyi类，继承Game的属性
 
 h = Houyi(300)     #对Houyi()类进行实例化,并给defense1传参
 h.defense(1200,300)     #给Houyi()类中defense方法传参
+print()
