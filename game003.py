@@ -27,12 +27,12 @@ class Houyi(Game):      #定义Houyi类，继承Game的属性
 
     def defense(self,enemy_power,enemy_hp):     #定义defense方法
         while True:
-            self.hp = self.hp + self.defense1 - enemy_power    #后裔的最终血量计算方法
-            enemy_hp = enemy_hp - self.power      #敌人的最终血量计算方法
+            self.hp = self.hp + self.defense1 - enemy_power    #后裔决战后血量计算方法
+            enemy_hp = enemy_hp - self.power      #敌人决战后血量计算方法
             print(self.hp,enemy_hp)
             if self.hp <= 0:
                 print('h我赢啦！！')
-                break
+                break       #退出当前循环
             elif enemy_hp <= 0:
                 print('h很遗憾！我输了！')
                 break
